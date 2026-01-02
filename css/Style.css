@@ -1,0 +1,84 @@
+:root {
+    --biru-muda: #00d4ff;
+    --biru-tua: #001f3f;
+    --ungu: #4b0082;
+    --putih: #ffffff;
+    --hijau: #00ff88;
+    --hitam: #0a0a0a;
+    --abu-tua: #1a1a1a;
+    --abu-muda: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+body { background-color: var(--hitam); color: var(--putih); overflow-x: hidden; }
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+
+/* --- Navigasi --- */
+header { background: rgba(10, 10, 10, 0.95); padding: 20px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 2px solid var(--abu-muda); }
+nav { display: flex; justify-content: space-between; align-items: center; width: 90%; margin: 0 auto; }
+.logo { font-size: 26px; font-weight: bold; color: var(--putih); text-decoration: none; }
+.logo span { color: var(--biru-muda); }
+.nav-menu { display: flex; list-style: none; gap: 12px; }
+.nav-item { padding: 8px 18px; color: var(--putih); text-decoration: none; border: 1px solid var(--abu-muda); border-radius: 6px; transition: 0.3s; font-size: 0.85rem; }
+.nav-item:hover { background: var(--biru-muda); color: var(--hitam); transform: translateY(-3px); }
+
+/* --- Hero Section --- */
+.hero { min-height: 80vh; display: flex; align-items: center; padding-top: 100px; background: linear-gradient(135deg, var(--biru-tua) 0%, var(--hitam) 100%); }
+.hero-wrapper { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.image-circle { width: 280px; height: 280px; border: 6px solid var(--abu-muda); border-radius: 50%; overflow: hidden; box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); }
+.image-circle img { width: 100%; height: 100%; object-fit: cover; }
+.hero-text { flex: 1.5; }
+.badge { background: var(--hijau); color: var(--hitam); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+h1 { font-size: 3.5rem; margin: 10px 0; }
+.text-gradient { background: linear-gradient(to right, var(--biru-muda), var(--hijau)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.description { margin-bottom: 25px; line-height: 1.6; color: #bbb; font-size: 0.95rem; }
+
+.btn-main, .btn-outline { padding: 12px 25px; border-radius: 6px; font-weight: bold; display: inline-block; text-decoration: none; transition: 0.4s; }
+.btn-main { background: var(--hijau); color: var(--hitam); }
+.btn-main:hover { box-shadow: 0 0 20px var(--hijau); transform: scale(1.05); }
+.btn-outline { border: 2px solid var(--biru-muda); color: var(--biru-muda); margin-left: 10px; }
+.btn-outline:hover { background: var(--biru-muda); color: var(--hitam); transform: rotate(-3deg); }
+
+/* --- Vision --- */
+.vision-section { padding: 50px 0; background: var(--hitam); }
+.vision-content { display: flex; gap: 20px; flex-wrap: wrap; }
+.vision-card { flex: 1; min-width: 280px; background: var(--abu-tua); padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 15px; border: 1px solid var(--abu-muda); transition: 0.4s; }
+.vision-icon { font-size: 1.8rem; color: var(--hijau); background: rgba(0, 255, 136, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+.vision-text h3 { color: var(--biru-muda); font-size: 1.1rem; margin-bottom: 5px; }
+.vision-text p { color: #aaa; font-size: 0.8rem; }
+
+/* --- Contact Section --- */
+.contact-footer-section { padding: 80px 0; background: #050505; }
+.sub-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--biru-muda); }
+.contact-wrapper { display: flex; gap: 50px; flex-wrap: wrap; }
+.contact-info, .contact-container { flex: 1; min-width: 300px; }
+
+.contact-desc { color: #888; margin-bottom: 30px; font-size: 0.9rem; }
+.info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.info-item i { font-size: 1.2rem; color: var(--biru-muda); background: var(--abu-tua); padding: 15px; border-radius: 50%; }
+.info-item h4 { font-size: 0.7rem; color: var(--biru-muda); letter-spacing: 1px; }
+.info-item p { font-size: 0.9rem; color: var(--putih); }
+
+/* Tombol WhatsApp Animasi */
+.btn-whatsapp {
+    display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: white;
+    padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold;
+    margin-top: 20px; transition: 0.3s; animation: float 3s ease-in-out infinite;
+}
+.btn-whatsapp:hover { background: var(--putih); color: #25d366; box-shadow: 0 0 20px #25d366; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Formulir */
+.contact-container { background: var(--abu-tua); padding: 30px; border-radius: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; background: var(--hitam); border: 1px solid var(--abu-muda); color: white; border-radius: 6px; margin-bottom: 15px; outline: none; }
+.btn-send { width: 100%; padding: 14px; background: var(--hijau); color: var(--hitam); border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.btn-send:hover { background: var(--putih); letter-spacing: 1px; }
+
+footer { padding: 30px; text-align: center; border-top: 1px solid var(--abu-muda); color: #555; font-size: 0.8rem; }
+
+@media (max-width: 768px) { h1 { font-size: 2.5rem; } .hero-wrapper { text-align: center; justify-content: center; } .btn-outline { margin: 10px 0 0 0; } }

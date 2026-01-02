@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Dhiyaul Auliyah Jadid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --biru-muda: #00d4ff;
+            --biru-gelap: #007bff;
+            --hijau: #00ff88;
+            --hitam: #0a0a0a;
+            --abu-tua: #161616;
+            --abu-muda: #2d2d2d;
+            --putih: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--hitam); color: var(--putih); }
+
+        header { background: rgba(10, 10, 10, 0.98); padding: 15px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid var(--abu-muda); }
+        nav { display: flex; justify-content: space-between; align-items: center; width: 90%; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--putih); text-decoration: none; }
+        .logo span { color: var(--biru-muda); }
+        .nav-menu { display: flex; list-style: none; gap: 10px; }
+        .nav-item { padding: 8px 12px; color: var(--putih); text-decoration: none; border: 1px solid var(--abu-muda); border-radius: 6px; font-size: 0.75rem; transition: 0.3s; }
+        .nav-item:hover { background: var(--biru-muda); color: black; }
+
+        .contact-page { padding: 120px 5% 60px; max-width: 1100px; margin: 0 auto; }
+        .header-contact { text-align: center; margin-bottom: 50px; }
+        .header-contact p { color: var(--biru-muda); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        .header-contact h1 { font-size: 2.5rem; margin-top: 10px; }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            background: var(--abu-tua);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid var(--abu-muda);
+        }
+
+        /* Info Side */
+        .info-side h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .info-side p.desc { color: #888; margin-bottom: 30px; font-size: 0.9rem; }
+
+        .contact-info-list { margin-bottom: 30px; }
+        .info-item { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+        .info-icon { 
+            width: 45px; height: 45px; 
+            background: var(--biru-gelap); 
+            display: flex; justify-content: center; align-items: center; 
+            border-radius: 12px; font-size: 1.1rem; color: white;
+        }
+        .info-text p { font-size: 0.65rem; color: #888; text-transform: uppercase; margin-bottom: 2px; }
+        .info-text h4 { font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
+
+        .social-links { display: flex; gap: 12px; margin-top: 30px; }
+        .social-btn {
+            width: 45px; height: 45px;
+            border: 1px solid var(--abu-muda);
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            color: var(--putih);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .social-btn:hover { background: var(--biru-muda); color: black; border-color: var(--biru-muda); transform: translateY(-3px); }
+
+        /* Form Side */
+        .form-side { background: rgba(255,255,255,0.02); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: #1a1a1a;
+            border: 1px solid var(--abu-muda);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            font-size: 0.9rem;
+        }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--biru-muda); }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: var(--biru-gelap);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex; justify-content: center; align-items: center; gap: 10px;
+            transition: 0.3s;
+        }
+        .btn-submit:hover { background: #0056b3; transform: scale(1.02); }
+
+        /* Closing Statement */
+        .closing-box {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+            border-top: 1px solid var(--abu-muda);
+        }
+        .closing-box p {
+            font-style: italic;
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .signature {
+            margin-top: 20px;
+            color: var(--hijau);
+            font-weight: 600;
+            display: block;
+        }
+
+        footer { text-align: center; padding: 30px; color: #444; font-size: 0.75rem; }
+
+        @media (max-width: 900px) {
+            .contact-wrapper { grid-template-columns: 1fr; padding: 25px; }
+            .header-contact h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DJ<span>.</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="projects.html" class="nav-item">Projects</a></li>
+                <li><a href="media.html" class="nav-item">Media</a></li>
+                <li><a href="contact.html" class="nav-item" style="background: var(--biru-muda); color: black;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="header-contact">
+            <p>Get In Touch</p>
+            <h1>Hubungi Saya</h1>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="info-side">
+                <h2>Informasi Kontak</h2>
+                <p class="desc">Saya selalu terbuka untuk diskusi mengenai pengembangan website, analisis sistem, atau peluang kolaborasi lainnya.</p>
+
+                <div class="contact-info-list">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <p>Email Resmi</p>
+                            <h4>honakax13@gmail.com</h4>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info-text">
+                            <p>WhatsApp</p>
+                            <h4>+62 882-9898-4650</h4>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <p>Alamat Lengkap</p>
+                            <h4>Bojong Poncol RT 03 RW 08, Kunciran Indah, Kec. Pinang, Kota Tangerang</h4>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fab fa-telegram-plane"></i></div>
+                        <div class="info-text">
+                            <p>Telegram Personal & Kerja</p>
+                            <h4>@engine_pro123 | @dhiyaul_jadid</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/16wGv25Udq/" target="_blank" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/engine_pro123?igsh=b3hlbTZvbXZub3p0" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6288298984650" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="form-side">
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Alamat Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        Kirim Pesan <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <section class="closing-box">
+            <p>
+                "Terima kasih banyak telah meluangkan waktu berharga Anda untuk mengunjungi portofolio digital saya. Setiap kunjungan dan pesan adalah motivasi besar bagi saya untuk terus belajar dan berkarya di bidang teknologi informasi. Saya sangat menantikan kabar baik dari Anda, baik itu untuk sekadar bertukar pikiran maupun menjalin kerja sama profesional. Semoga hari Anda dipenuhi dengan keberkahan dan kesuksesan."
+                <span class="signature">Salam Hangat, Dhiyaul Auliyah Jadid</span>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dhiyaul Auliyah Jadid | Mahasiswa Sistem Informasi | NIM: 251011700503</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Dhiyaul Auliyah Jadid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --biru-muda: #00d4ff;
+            --hijau: #00ff88;
+            --hitam: #0a0a0a;
+            --abu-tua: #161616;
+            --abu-muda: #2d2d2d;
+            --putih: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--hitam); color: var(--putih); line-height: 1.6; }
+
+        header { background: rgba(10, 10, 10, 0.98); padding: 15px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid var(--abu-muda); }
+        nav { display: flex; justify-content: space-between; align-items: center; width: 90%; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--putih); text-decoration: none; }
+        .logo span { color: var(--biru-muda); }
+        .nav-menu { display: flex; list-style: none; gap: 10px; }
+        .nav-item { padding: 8px 12px; color: var(--putih); text-decoration: none; border: 1px solid var(--abu-muda); border-radius: 6px; font-size: 0.75rem; }
+
+        .project-page { padding: 100px 5% 50px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h1 { font-size: 2.5rem; }
+
+        .project-container { display: flex; flex-direction: column; gap: 50px; max-width: 900px; margin: 0 auto; }
+
+        .project-card {
+            background: var(--abu-tua);
+            border-radius: 20px;
+            border: 1px solid var(--abu-muda);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-img-wrapper { width: 100%; background: #000; display: flex; justify-content: center; }
+        .project-img-wrapper img { width: 100%; height: auto; display: block; object-fit: contain; }
+
+        .project-content { padding: 30px; }
+        .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .project-header h3 { font-size: 1.5rem; color: var(--biru-muda); }
+
+        .project-description {
+            color: #bbb;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            border-left: 3px solid var(--hijau);
+            padding-left: 15px;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+
+        .tech-icons { display: flex; gap: 15px; font-size: 1.8rem; color: var(--hijau); }
+        .tech-label { font-size: 0.8rem; color: #888; }
+
+        footer { padding: 30px; text-align: center; color: #555; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DJ<span>.</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="projects.html" class="nav-item" style="background: var(--biru-muda); color: black;">Projects</a></li>
+                <li><a href="Media.html" class="nav-item">Media</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-page">
+        <div class="section-title">
+            <h1>Hasil Proyek Coding</h1>
+        </div>
+
+        <div class="project-container">
+            
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="assets/img/project1.jpg" alt="Kalkulator Belanja">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Hitung Total Belanja 🛒</h3>
+                    </div>
+                    <p class="project-description">
+                        Aplikasi berbasis web sederhana untuk membantu pengguna menghitung total belanjaan secara cepat. Program ini murni menggunakan logika matematika di dalam <strong>JavaScript</strong> untuk memproses perkalian antara harga dan jumlah barang tanpa bantuan styling CSS tambahan.
+                    </p>
+                    <div class="project-footer">
+                        <div class="tech-icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <span class="tech-label">HTML & JavaScript Only</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="assets/img/project2.jpg" alt="Data Mahasiswa">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>📝 Data Mahasiswa & Usia</h3>
+                    </div>
+                    <p class="project-description">
+                        Proyek fungsionalitas data mahasiswa yang mencakup desain antarmuka, pengaturan tata letak, dan logika perhitungan. Di dalamnya terdapat <strong>Internal CSS</strong> untuk mempercantik form serta fungsi <strong>hitungUsia()</strong> pada JavaScript untuk menghitung umur pengguna secara otomatis.
+                    </p>
+                    <div class="project-footer">
+                        <div class="tech-icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <span class="tech-label">HTML, CSS, & JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="assets/img/project3.jpg" alt="Website Layout">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>WebLayout Tugas P14</h3>
+                    </div>
+                    <p class="project-description">
+                        Pembangunan kerangka website modern dengan fokus utama pada struktur <strong>HTML</strong> dan estetika visual melalui <strong>External CSS</strong>. Proyek ini mendemonstrasikan penyusunan elemen-elemen web seperti navigasi, hero section, dan kartu informasi agar terlihat rapi dan profesional.
+                    </p>
+                    <div class="project-footer">
+                        <div class="tech-icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <span class="tech-label">HTML & CSS Only</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dhiyaul Auliyah Jadid | NIM: 251011700503</p>
+    </footer>
+
+</body>
+</html>
